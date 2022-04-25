@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="style.css">
+	<title>Direccion Disponibilidad</title>
+
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		html{
+			scroll-behavior: smooth;
+		}
+
+		body{
+			background-color: white;
+		}
+
+		
+
+			.container{
+			width: 100%;
+			height: 100vh;
+			box-sizing: border-box;
+			background-color: black;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+			grid-template-areas: "icones icones icones icones" "menu menu menu menu" "fundo fundo fundo fundo" "clientes clientes clientes clientes" "servicios servicios servicios servicios"
+			"certificados certificados certificados certificados" "actualidad actualidad actualidad actualidad" "footer footer footer footer";
+			grid-template-rows: 80px 80px 695px 100px 920px 920px 920px;
+			grid-gap: 10px;
+
+		}
+
+		.div-logo-icones{
+			background-color: #FFCD01;
+			grid-area: icones;
+			display: flex;
+			transition: 0.7s;
+			top: 0;
+			position: fixed;
+			z-index: 1500;
+		}
+
+
+		.abajo1{
+			background-color: #FFCD01;
+		}
+
+		
+
+		.div-logo-icones .logo{
+			width: 40%;
+			height: 100%;
+			display: flex;
+			justify-content: right;
+			align-items: center;
+		}
+
+		.div-logo-icones .logo .image-logo{
+			width: 20%;
+			height: 100%;
+		}
+
+		.div-icones{
+			width: 60%;
+			height: 100%;
+			position: relative;
+			top: 20px;
+		}
+
+		.div-icones .number-escritorio{
+			width: 100%;
+			height: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-family: sans-serif;
+			font-size: 20px;
+			color: #06b6ff;;
+		}
+
+		.div-icones .icones{
+			width: 100%;
+			height: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			top: 10px;
+		}
+
+		.div-icones .div-facebook{
+			width: 5%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.div-icones .icones .facebook-icon{
+			font-size: 20px;
+			color: #06b6ff;
+		}
+
+
+		.div-icones .div-facebook:hover{
+			color: white;
+		}
+
+		.div-icones .icones .facebook-icon:hover{
+			color: white;
+		}
+
+		.div-icones .div-instagram{
+			width: 5%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.div-icones .icones .instagram-icon{
+			font-size: 20px;
+			color: #06b6ff;
+		}
+
+
+		.div-icones .div-instagram:hover{
+			color: white;
+		}
+
+		.div-icones .icones .instagram-icon:hover{
+			color: white;
+		}
+
+		.div-icones .div-whatsapp{
+			width: 5%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.div-icones .icones .whatsapp-icon{
+			font-size: 20px;
+			color: #06b6ff;
+		}
+
+
+		.div-icones .div-whatsapp:hover{
+			color: white;
+		}
+
+		.div-icones .icones .whatsapp-icon:hover{
+			color: white;
+		}
+
+
+		.div-icones .div-email{
+			width: 5%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.div-icones .icones .email-icon{
+			font-size: 20px;
+			color: #06b6ff;
+		}
+
+
+		.div-icones .div-email:hover{
+			color: white;
+		}
+
+		.div-icones .icones .email-icon:hover{
+			color: white;
+		}
+
+
+		.div-menu{
+			background-color: #000099;
+			grid-area: menu;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.menu{
+			width: 100%;
+			height: 102px;
+			position: fixed;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: #000099;
+			transition: 0.7s;
+			top: 100;
+			left: 0;
+			z-index: 1000;
+		}
+
+
+		.abajomenu{
+			background-color: #000099;
+		}
+
+		.div-menu .menu li{
+			display: inline-block;
+			list-style: none;
+			margin: 15px;
+		}
+
+		.div-menu .menu li a{
+			text-decoration: none;
+			font-size: 17px;
+			font-family: sans-serif;
+			color: white;
+			cursor: pointer;
+		}
+
+
+		.div-menu .menu li a:hover{
+			color: #FFCD01;
+		}
+
+
+		.div-menu .icon-menu{
+			font-size: 50px;
+			color: white;
+			padding-right: 5px;
+			display: none;
+			cursor: pointer;
+		}
+
+
+		
+
+		.div-formulario{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			background-color: black;
+		}
+
+
+		.div-formulario img{
+			width: 100%;
+			height: 99%;
+			opacity: 0.3;
+		}
+
+
+		.box-text-formulario{
+			width: 43%;
+			height: 18%;
+			position: absolute;
+			top: 220px;
+			left: 540px;
+		}
+
+
+		.box-text-formulario p{
+			color: white;
+			font-family: sans-serif;
+			font-size: 17px;
+			text-align: justify;
+		}
+
+
+
+		.box-formulario{
+			width: 100%;
+			height: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			top: 430px;
+		}
+
+
+		.box-formulario form{
+				height: 100%;
+				height: 100%;
+				padding: 50px;
+				background: rgba(0, 0, 0, 0.2);
+				border-radius: 6px;
+		}
+
+
+		.box-formulario form label{
+			font-size: 18px;
+			font-family: sans-serif;
+			color: white;
+		}
+
+
+		.box-formulario form input{
+			height: 30px;
+			text-align: center;
+			padding-left: 5px;
+			margin-top: 20px;
+			border-radius: 3px;
+			font-family: sans-serif;
+			font-size: 15px;
+			border: none;
+		}
+
+
+		.nombreempresa{
+			width: 100%;
+		}
+
+
+		.div-contacto{
+			width: 100%;
+		}
+
+
+		.nombre{
+			width: 32.9%;
+		}
+
+		.telefone{
+			width: 32.9%;
+		}
+
+		.email{
+			width: 32.9%;
+		}
+
+
+		.btn-enviar{
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			top: 20px;
+		}
+
+		.btn-enviar button{
+			width: 50%;
+			height: 38px;
+			font-size: 20px;
+			font-family: sans-serif;
+			cursor: pointer;
+			background-color: orange;
+			border: none;
+			color: white;
+			border-radius: 4px;
+		}
+
+
+
+		.calle{
+			width: 36%;
+		}
+
+
+		.numero{
+			width: 8%;
+		}
+
+		.colonia{
+			width: 36%;
+		}
+
+		.ciudad{
+			width: 10%;
+			height: 31px;
+			cursor: pointer;
+		}
+
+		.postal{
+			width: 8%;
+		}
+
+		.div-footer{
+			grid-area: footer;
+			background-color: yellow;
+		}
+
+
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="div-logo-icones">
+			<div class="logo">
+				<img class="image-logo" src="logo/mie_logo.png">
+			</div>
+
+			<div class="div-icones">
+				<div class="number-escritorio">664-391-1254</div>
+
+				<div class="icones">
+					<div class="div-facebook">
+						<a href="#"><i class='fa fa-facebook facebook-icon'></i></a>
+					</div>
+
+					<div class="div-instagram">
+						<a href="#"><i class="fa fa-instagram instagram-icon" aria-hidden="true"></i></a>
+					</div>
+
+					<div class="div-whatsapp">
+						<a href="#"><i class="fa fa-whatsapp whatsapp-icon" aria-hidden="true"></i></a>
+					</div>
+
+					<div class="div-email">
+						<a href="#"><i class="fa fa-envelope email-icon"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="div-menu">
+				<ul class="menu">
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="direccion.html">Direccion Disponibilidad</a></li>
+					<li><a href="sobre.html">Sobre Nosotros</a></li>
+					<li><a href="tecnologia.html">Nuestra Tecnologia</a></li>
+					<li><a href="aviso.html">Aviso de Privacidad</a></li>
+					
+					<li><a href="contacto.html">Contacto</a></li>
+				</ul>
+
+				<i class="fa fa-bars icon-menu"></i>
+
+		</div>
+
+
+		<div class="div-formulario">
+		<img src="imageDireccion/internetfundo1.jpg">
+
+		<div class="box-text-formulario">
+			<p>
+				En el formulario de abajo, le pediremos la ubicación de su empresa y la información de contacto. Esto es para verificar que podamos brindar servicio de internet a su dirección utilizando nuestras redes inalámbricas o de fibra óptica.
+
+				Ingrese su dirección y otra información con la mayor precisión posible. Le notificaremos por mensaje de texto y correo electrónico si se encuentra en nuestra área de cobertura.
+
+ 				MIE opera su propia infraestructura de red y no es un revendedor. Aunque nuestra red cubre muchas áreas. 
+			</p>
+		</div>
+
+		<div class="box-formulario">
+			<form>
+				<label for="nombre">Nombre De la Empresa</label><br>
+				<input type="text" name="nombreempresa" class="nombreempresa" placeholder="Escribe su nombre"><br><br>
+
+				<label for="direccion">Direccion</label><br>
+				<div class="div-direccion">
+					<input type="text" name="direccion" class="calle" placeholder="Calle">
+					<input type="text" name="direccion" class="numero" placeholder="Numero">
+					<input type="text" name="direccion" class="colonia" placeholder="Colonia">
+					<!--<input type="text" name="direccion" class="ciudad" placeholder="Ciudad">-->
+					<select class="ciudad">
+						<option>CIUDAD</option>
+						<option>TIJUANA</option>
+						<option>MEXICALI</option>
+						<option>ENSENADA</option>
+						<option>TECATE</option>
+						<option>ROSARITO</option>
+						<option>CD JUAREZ</option>
+						<option>NOGALES</option>
+						<option>LAREDO</option>
+					</select>
+					<input type="text" name="direccion" class="postal" placeholder="CP">
+				</div><br><br>
+
+				<label for="contacto">Contacto</label><br>
+
+				<div class="div-contacto">
+					<input type="text" name="contacto" class="nombre" placeholder="Nombre Completo">
+					<input type="text" name="contacto" class="telefone" placeholder="Numero">
+					<input type="text" name="contacto" class="email" placeholder="E-mail">
+				</div><br><br>
+
+
+				<div class="btn-enviar">
+					<button>ENVIAR</button>
+				</div>
+
+			</form>
+		</div>
+
+	</div>
+
+
+
+			<div class="div-pop-mensage">
+				<div class="box-pop-mensages">
+					
+					<div class="pop-whatsapp">
+						<a href="#"><i class="fa fa-whatsapp pop-icon-whatsapp"></i></a>
+					</div>
+
+					
+					<div class="pop-email">
+						<a href="#"><i class="fa fa-envelope pop-icon-email"></i></a>
+					</div>
+
+
+					<div class="pop-phone">
+						<a href="#"><i class="fa fa-phone pop-icon-phone"></i></a>
+					</div>
+
+
+					<div class="pop-headphones">
+						<img src="imaje/headset.png">
+					</div>
+
+					<div class="pop-close">
+						<a href="#"><i class="fa fa-close pop-icon-close"></i></a>
+					</div>
+
+
+				</div>
+			</div>
+
+
+
+	</div>
+
+
+	
+
+	<!--<div class="div-footer">
+		fghgfhfhfghfghf
+	</div>-->
+
+</div>
+
+</body>
+
+
+<script type="text/javascript">
+	let popHeadphone=document.querySelector(".pop-headphones");
+let popClose=document.querySelector(".pop-close");
+let popWhatsapp=document.querySelector(".pop-whatsapp");
+let popEmail=document.querySelector(".pop-email");
+let popPhone=document.querySelector(".pop-phone");
+
+popHeadphone.onclick=function() {
+		popWhatsapp.style="opacity:1;transition:1s";
+		popEmail.style="opacity:1;transition:1s";
+		popPhone.style="opacity:1;transition:1s";
+		popClose.style="opacity:1;top:80px";
+		popHeadphone.style="display:none";
+}
+
+
+popClose.onclick=function(){
+	popWhatsapp.style="opacity:0;transition:1s";
+	popEmail.style="opacity:0;transition:1s";
+	popPhone.style="opacity:0;transition:1s";
+	popClose.style="display:none";
+	popHeadphone.style="display;flex;justify-content:center;align-items:center;zIndex:7000";	
+}
+</script>
+
+</html>
