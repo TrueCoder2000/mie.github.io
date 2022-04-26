@@ -52,6 +52,7 @@
 			top: 0;
 			position: fixed;
 			z-index: 1500;
+			width:100%;
 		}
 
 
@@ -81,7 +82,7 @@
 			top: 20px;
 		}
 
-		.div-icones .number-escritorio{
+		/*.div-icones .number-escritorio{
 			width: 100%;
 			height: 50%;
 			display: flex;
@@ -90,17 +91,40 @@
 			font-family: sans-serif;
 			font-size: 20px;
 			color: #06b6ff;;
-		}
+		}*/
 
 		.div-icones .icones{
 			width: 100%;
-			height: 50%;
+			height: 100%;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			position: relative;
-			top: 10px;
 		}
+
+
+
+		.div-icones .div-phone{
+			width: 5%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.div-icones .icones .phone-icon{
+			font-size:35px;
+			color: #06b6ff;
+			transform: rotate(45deg);
+		}
+
+
+
+		.div-icones .div-phone .phone-icon:hover{
+			color: white;
+		}
+
+
 
 		.div-icones .div-facebook{
 			width: 5%;
@@ -111,7 +135,7 @@
 		}
 
 		.div-icones .icones .facebook-icon{
-			font-size: 20px;
+			font-size: 35px;
 			color: #06b6ff;
 		}
 
@@ -133,7 +157,7 @@
 		}
 
 		.div-icones .icones .instagram-icon{
-			font-size: 20px;
+			font-size: 35px;
 			color: #06b6ff;
 		}
 
@@ -155,7 +179,7 @@
 		}
 
 		.div-icones .icones .whatsapp-icon{
-			font-size: 20px;
+			font-size: 35px;
 			color: #06b6ff;
 		}
 
@@ -178,7 +202,7 @@
 		}
 
 		.div-icones .icones .email-icon{
-			font-size: 20px;
+			font-size: 35px;
 			color: #06b6ff;
 		}
 
@@ -193,7 +217,7 @@
 
 
 		.div-menu{
-			background-color: #000099;
+			background-color: midnightblue;
 			grid-area: menu;
 			display: flex;
 			justify-content: center;
@@ -207,7 +231,7 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			background-color: #000099;
+			background-color: midnightblue;
 			transition: 0.7s;
 			top: 100;
 			left: 0;
@@ -216,7 +240,8 @@
 
 
 		.abajomenu{
-			background-color: #000099;
+			/*background-color: #000099;*/
+			background-color: #b34700;
 		}
 
 		.div-menu .menu li{
@@ -225,17 +250,23 @@
 			margin: 15px;
 		}
 
+
+
 		.div-menu .menu li a{
 			text-decoration: none;
 			font-size: 17px;
 			font-family: sans-serif;
 			color: white;
 			cursor: pointer;
+			transition: 0.9s;
 		}
 
 
 		.div-menu .menu li a:hover{
 			color: #FFCD01;
+			transition: 0.9s;
+			border-bottom: 1px white solid;
+			width: 50%;
 		}
 
 
